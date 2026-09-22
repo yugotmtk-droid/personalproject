@@ -30,13 +30,13 @@ export default function RecycleFocus({ language, furigana }: Props) {
         <h2 className="one-line-title">
           {ja ? (
             <>
-              <J>5Rではなく</J><span className="type-katakana"><J>リサイクル</J></span><J>について深く知ろう。</J>
+              <span className="type-katakana"><J>リサイクル</J></span><J>について詳しく知ろう。</J>
             </>
           ) : "Go deep on Recycle instead of covering all 3Rs broadly."}
         </h2>
         <p className="focus-purpose-copy desktop-one-line-copy">
           {ja ? (
-            <J>このサイトの趣旨は5Rの認知ではなく、大量廃棄という5Rの中にある社会問題の実践的な解決方法の行動を促すことです。</J>
+            <J>このサイトの趣旨は5Rの認知だけではなく、大量廃棄という5Rの中にある社会問題の実践的な解決方法の行動を促すことです。</J>
           ) : (
             "The goal is not to memorize the 3Rs, but to understand a practical response to mass disposal and turn that knowledge into action."
           )}

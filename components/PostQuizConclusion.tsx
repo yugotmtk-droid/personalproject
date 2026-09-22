@@ -33,7 +33,7 @@ export default function PostQuizConclusion({ language, furigana }: Props) {
         <section className="takeaway-message" aria-labelledby="takeaway-title">
           <p className="eyebrow">WHAT THIS SITE WANTS TO SAY</p>
           <h3 id="takeaway-title" className="takeaway-one-line">
-            {ja ? <J>5Rを広く認知するのではなく、リサイクルを深く知って行動していく。</J> : "Go deeper on Recycle, then change what you do."}
+            {ja ? <J>5Rを認知するだけではなく、リサイクルを理解し行動していく。</J> : "Go deeper on Recycle, then change what you do."}
           </h3>
           <p>
             {ja ? <J>このサイトでは、大量廃棄の実態とその解決方法を伝えてきました。しかし、知るだけではなく行動してもらうことがこのサイトで最後に伝えたいことです。</J> : "The final message is simple: reducing mass disposal takes more than knowing the system. Learn from real companies and products, then change how you sort and put materials out."}

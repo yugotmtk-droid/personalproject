@@ -21,7 +21,7 @@ export default function HeroSection({ language, furigana }: Props) {
         <p className="eyebrow">5R ACTION / RECYCLE FOCUS</p>
         <h1 className="hero-two-line-title">
           {language === "ja" ? (
-            <span className="hero-title-line"><J>リサイクルに対する解決方法を知ろう。</J></span>
+            <><span className="hero-title-line"><J>リサイクルに対する</J></span><span className="hero-title-line"><J>解決方法を知ろう。</J></span></>
           ) : (
             <span className="hero-title-line">Learn practical solutions through recycling.</span>
           )}

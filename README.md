@@ -1,10 +1,10 @@
-# 3R ACTION - Recycle Focus
+# 5R ACTION - Recycle Focus
 
 This version restructures the website around Recycle as the project's practical response to mass disposal.
 
 ## Main structure
 1. Hero: Recycle-focused project message
-2. Why Recycle: explains why the project narrowed from all 3Rs to one practical method
+2. Why Recycle: explains why the project narrowed from all 5Rs to one practical method
 3. Recycle in practice: visual loop from used item to new resource/product
 4. Field report: Okuyama Shoten interview-based recycling workflow and industry realities
 5. Quiz: 10 questions per attempt (3 interview questions + 7 Recycle questions), drawn from a 300-question Recycle bank

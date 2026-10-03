@@ -54,48 +54,28 @@ export default function FieldReport({ language, furigana }: Props) {
   return (
     <section id="field-report" className="field-report-section">
       <div className="section-shell">
-        <header className="field-report-hero field-report-hero-v2">
+        <header className="field-report-hero field-report-hero-v2 field-report-hero-compact">
           <div>
-            <p className="eyebrow">{ja ? <J>取材内容 / 奥山商店さん</J> : "FIELD REPORT / OKUYAMA SHOTEN"}</p>
+            <p className="eyebrow">{ja ? <J>取材内容 / 奥山商店株式会社</J> : "FIELD REPORT / OKUYAMA SHOTEN"}</p>
             <h2 className="field-report-main-title desktop-one-line-title">
               {ja ? <J>ゴミの先には、人の未来がある。</J> : "Behind every piece of waste is someone's work."}
             </h2>
             <p className="field-report-lead field-report-lead-one-line">
               {ja ? (
-                <J>資源が再び材料になるまでの構図を、奥山商店株式会社さんへの取材をもとに理解しよう。</J>
+                <J>資源が再び材料になるまでの構図を、奥山商店株式会社への取材をもとに理解しよう。</J>
               ) : (
                 "Based on an interview with Okuyama Shoten Co., Ltd., this visual report follows materials from collection to sorting, compression, and reuse."
               )}
             </p>
-            <div className="report-source-chips">
-              <span>{ja ? <J>取材レポート</J> : "Interview report"}</span>
-              <span>{ja ? <J>公式情報で補足</J> : "Official sources added"}</span>
-            </div>
           </div>
-          <aside className="report-purpose-card" aria-label={ja ? "このレポートの目的" : "Purpose of this report"}>
-            <p className="report-purpose-kicker">
-              {ja ? <J>このレポートで分かること</J> : "WHAT THIS REPORT SHOWS"}
-            </p>
-            <h3 className="report-purpose-title">
-              {ja ? <J>ゴミを出した後の工程</J> : "What happens after we put waste out?"}
-            </h3>
-            <div className="report-purpose-list">
-              <div><span aria-hidden="true">🚚</span><p>{ja ? <J>回収する人</J> : "Collectors"}</p></div>
-              <div><span aria-hidden="true">♻️</span><p>{ja ? <J>資源の行方</J> : "Resource journey"}</p></div>
-              <div><span aria-hidden="true">⚠️</span><p>{ja ? <J>現場の課題</J> : "Field challenges"}</p></div>
-            </div>
-            <p className="report-purpose-note">
-              {ja ? <J>回収の先を、図と数字で短く理解します。</J> : "A concise visual guide to what happens after collection."}
-            </p>
-          </aside>
         </header>
 
         <section className="report-company-intro" aria-labelledby="company-intro-title">
           <div className="report-company-intro-copy">
             <p className="eyebrow">INTERVIEW / COMPANY</p>
-            <h3 id="company-intro-title" className="one-line-title">{ja ? <J>奥山商店株式会社さんについて</J> : "First, meet Okuyama Shoten Co., Ltd."}</h3>
+            <h3 id="company-intro-title" className="one-line-title">{ja ? <J>奥山商店株式会社について</J> : "First, meet Okuyama Shoten Co., Ltd."}</h3>
             <p>{ja ? (<>
-              <J>奥山商店は日頃から私たちが普段何気なく捨てているゴミを資源として活用できるようにする会社です。</J><br />
+              <J>奥山商店株式会社は日頃から私たちが普段何気なく捨てているゴミを資源として活用できるようにする会社です。</J><br />
               <J>下の数字はそれぞれ会社を象徴する三つの数字です。</J>
             </>) : "The three figures below are a quick company introduction so you know whose work this report follows before exploring the recycling process."}</p>
           </div>
@@ -134,7 +114,7 @@ export default function FieldReport({ language, furigana }: Props) {
         <section className="report-visual-block">
           <div className="report-block-heading">
             <p className="eyebrow">01 / FLOW</p>
-            <h3>{ja ? <J>資源がどう扱われるかの工程を知ろう。</J> : "Collection is only the beginning."}</h3>
+            <h3 className="flow-one-line-title">{ja ? <J>資源がどう扱われるかの工程を知ろう。</J> : "Collection is only the beginning."}</h3>
           </div>
 
           <div className="process-flow" aria-label={ja ? "資源回収の流れ" : "Recycling flow"}>
@@ -212,18 +192,13 @@ export default function FieldReport({ language, furigana }: Props) {
         <section className="report-visual-block report-challenges-v2">
           <div className="report-block-heading">
             <p className="eyebrow">04 / REALITY</p>
-            <h3>{ja ? <J>現場で見えた、数字の重さ。</J> : "The numbers reveal the pressure on the industry."}</h3>
+            <h3>{ja ? <J>現場から見えた様々な困難</J> : "Challenges seen in the field"}</h3>
             <p>{ja ? <J>以下は取材で聞いた数値で表せる古紙、再生紙の現状とみられる問題などです。</J> : "These figures were reported in the interview and are shown here to make their impact easier to grasp."}</p>
           </div>
           <div className="challenge-number-grid">
-            <article className="challenge-number-card decline"><span>{ja ? <J>新聞の回収量</J> : "Newspaper collection"}</span><strong>約 -20%</strong><p>{ja ? <J>毎年の減少と取材で説明</J> : "reported annual decline"}</p></article>
-            <article className="challenge-number-card decline"><span>{ja ? <J>雑誌・雑紙</J> : "Magazines / mixed paper"}</span><strong>約 -10%</strong><p>{ja ? <J>毎年の減少と取材で説明</J> : "reported annual decline"}</p></article>
-            <article className="challenge-number-card fire"><span>{ja ? <J>全焼したパッカー車</J> : "Burned-out packer truck"}</span><strong className="packer-price">{ja ? "約1,000万円" : "about ¥10M"}</strong><p>{ja ? <J>新車価格の目安</J> : "approximate replacement cost"}</p></article>
-          </div>
-          <div className="mini-challenge-row">
-            <div><span className="mini-emoji" aria-hidden="true">📦</span><p>{ja ? <J>置き配の誤回収</J> : "Parcel pickup mistakes"}</p></div>
-            <div><span className="mini-emoji" aria-hidden="true">🚛</span><p>{ja ? <J>運転人材の不足</J> : "Driver shortages"}</p></div>
-            <div><span className="mini-emoji" aria-hidden="true">🌧️</span><p>{ja ? <J>天候で回収量が変動</J> : "Weather changes volume"}</p></div>
+            <article className="challenge-number-card decline"><span>{ja ? <J>新聞の回収量</J> : "Newspaper collection"}</span><strong>約 -20%</strong><p>{ja ? <J>毎年新聞の回収量は減少傾向にある</J> : "Newspaper collection is declining each year"}</p></article>
+            <article className="challenge-number-card decline"><span>{ja ? <J>雑誌・雑紙</J> : "Magazines / mixed paper"}</span><strong>約 -10%</strong><p>{ja ? <J>毎年雑誌・雑紙の回収量も同じく減少傾向にある</J> : "Magazine and mixed-paper collection is also declining each year"}</p></article>
+            <article className="challenge-number-card fire"><span>{ja ? <J>1台あたりの回収車代</J> : "Cost per collection truck"}</span><strong className="packer-price">{ja ? "約1,000万円" : "about ¥10M"}</strong><p>{ja ? <J>新車価格の目安</J> : "approximate replacement cost"}</p></article>
           </div>
         </section>
 
@@ -249,7 +224,7 @@ export default function FieldReport({ language, furigana }: Props) {
             <article><span>03</span><strong>{ja ? <J>置き配を回収物から離す</J> : "Keep deliveries away from collection items"}</strong></article>
           </div>
           <blockquote className="report-final-quote desktop-one-line-copy">
-            {ja ? <J>リサイクルは捨てる前で全てが決まる‼</J> : "Recycling begins not after disposal, but with how we use and sort things before collection."}
+            {ja ? <J>リサイクルは、捨てる時から始まっている‼</J> : "Recycling begins not after disposal, but with how we use and sort things before collection."}
           </blockquote>
         </section>
 

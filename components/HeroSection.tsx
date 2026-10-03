@@ -18,23 +18,23 @@ export default function HeroSection({ language, furigana }: Props) {
   return (
     <section id="top" className="hero section-shell recycle-hero">
       <div className="hero-copy">
-        <p className="eyebrow">3R ACTION / RECYCLE FOCUS</p>
+        <p className="eyebrow">5R ACTION / RECYCLE FOCUS</p>
         <h1 className="hero-two-line-title">
           {language === "ja" ? (
-            <><span className="hero-title-line"><J>社会問題に対しての</J></span><span className="hero-title-line"><J>実践的な解決方法を知ろう。</J></span></>
+            <span className="hero-title-line"><J>リサイクルに対する解決方法を知ろう。</J></span>
           ) : (
-            <><span className="hero-title-line">Make what happens</span><span className="hero-title-line">after disposal visible.</span></>
+            <span className="hero-title-line">Learn practical solutions through recycling.</span>
           )}
         </h1>
         <p className="hero-lead hero-lead-two-lines">
           {language === "ja" ? (
             <>
-              <span className="hero-lead-line"><J>大量処分という社会的課題に対して、</J></span>
+              <span className="hero-lead-line"><J>大量処分という社会的課題に対して</J></span>
               <span className="hero-lead-line"><J>実践的な解決方法としてリサイクルがどれだけ効果的なのか、</J></span>
-              <span className="hero-lead-line"><J>企業の現場から学ぶサイトです。</J></span>
+              <span className="hero-lead-line"><J>実際に紙のリサイクルをお手伝いしている企業の現場から学ぶサイトです。</J></span>
             </>
           ) : (
-            "Explore how Recycle can become a practical response to mass disposal through real products, systems, and field reporting."
+            "Learn how effective recycling can be as a practical response to mass disposal through a company that works with paper recycling in the real world."
           )}
         </p>
         <button className="primary-button" onClick={scrollToFocus}>

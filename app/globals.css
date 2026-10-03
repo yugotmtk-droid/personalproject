@@ -2142,3 +2142,68 @@ html[lang="en"] .tokyo-summary-one-line {
   .five-r-list { gap: 8px; }
   .five-r-list > span { font-size: 12px; padding: 7px 11px; }
 }
+
+/* 2026-09-27 improvement-plan update */
+.five-r-heading {
+  margin: 28px 0 0;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+.five-r-card-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin-top: 22px !important;
+}
+.five-r-card {
+  min-height: 290px !important;
+  padding: 22px !important;
+}
+.five-r-card h3 {
+  margin: 28px 0 12px !important;
+  font-size: clamp(22px, 2vw, 30px) !important;
+  line-height: 1.15;
+}
+.five-r-card > p:last-child {
+  font-size: 14px;
+  line-height: 1.75 !important;
+}
+.five-r-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 24px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  font-size: 13px;
+  font-weight: 800;
+}
+.field-report-hero-compact {
+  display: block !important;
+  grid-template-columns: 1fr !important;
+  min-height: 0 !important;
+  margin-bottom: 22px !important;
+  padding-bottom: 0 !important;
+}
+.field-report-hero-compact > div {
+  max-width: none !important;
+}
+.flow-one-line-title,
+.flow-one-line-title .jp-text {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+.flow-one-line-title {
+  font-size: clamp(28px, 3.15vw, 46px) !important;
+}
+
+@media (max-width: 1100px) {
+  .five-r-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 760px) {
+  .five-r-card-grid { grid-template-columns: 1fr !important; }
+  .five-r-card { min-height: 0 !important; }
+  .flow-one-line-title,
+  .flow-one-line-title .jp-text { white-space: normal !important; }
+}

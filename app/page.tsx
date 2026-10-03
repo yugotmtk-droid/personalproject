@@ -5,7 +5,6 @@ import HeroSection from "@/components/HeroSection";
 import RecycleFocus from "@/components/RecycleFocus";
 import FieldReport from "@/components/FieldReport";
 import Quiz from "@/components/Quiz";
-import BottleFact from "@/components/BottleFact";
 import PostQuizConclusion from "@/components/PostQuizConclusion";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
@@ -17,8 +16,8 @@ export default function Home() {
   const [furigana, setFurigana] = useState(false);
 
   useEffect(() => {
-    const savedLanguage = window.localStorage.getItem("3r-language") as Language | null;
-    const savedFurigana = window.localStorage.getItem("3r-furigana");
+    const savedLanguage = window.localStorage.getItem("5r-language") as Language | null;
+    const savedFurigana = window.localStorage.getItem("5r-furigana");
     if (savedLanguage === "ja" || savedLanguage === "en") {
       setLanguage(savedLanguage);
     } else if (navigator.language.toLowerCase().startsWith("en")) {
@@ -28,12 +27,12 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("3r-language", language);
+    window.localStorage.setItem("5r-language", language);
     document.documentElement.lang = language;
   }, [language]);
 
   useEffect(() => {
-    window.localStorage.setItem("3r-furigana", String(furigana));
+    window.localStorage.setItem("5r-furigana", String(furigana));
   }, [furigana]);
 
   const context = useMemo(() => ({ language, furigana }), [language, furigana]);
@@ -51,7 +50,6 @@ export default function Home() {
       <FieldReport {...context} />
       <Quiz {...context} />
       <PostQuizConclusion {...context} />
-      <BottleFact {...context} />
       <Footer {...context} />
     </main>
   );

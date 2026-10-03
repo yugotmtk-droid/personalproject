@@ -11,16 +11,20 @@ export default function RecycleFocus({ language, furigana }: Props) {
     <JapaneseText text={children} enabled={furigana} />
   );
 
-  const reasons = ja
+  const fiveRs = ja
     ? [
-        ["01", "社会問題", "大量処分", "実態を知るだけではなく、対策を実践していくことに繋げる。", "🗑️"],
-        ["02", "選択", "より詳細に", "リサイクルに対しての仕組みや企業など詳細に認知を広げていこう。", "🔎"],
-        ["03", "焦点", "リサイクル", "リサイクルに対しての実態を取材を通して視覚的に認知する。", "♻️"],
+        ["01", "リフューズ", "必要のない袋や使い捨て容器を断り、ごみを生むきっかけを減らす。", "✋"],
+        ["02", "リデュース", "必要なものを必要な分だけ選び、出てくるごみの量を減らす。", "➖"],
+        ["03", "リユース", "使えるものをすぐに捨てず、繰り返し使って寿命を延ばす。", "🔁"],
+        ["04", "リペア", "壊れたものを修理して使い続け、捨てるまでの時間を延ばす。", "🛠️"],
+        ["05", "リサイクル", "使い終わったものを資源として生かし、新たな利用につなげる。", "♻️"],
       ]
     : [
-        ["01", "PROBLEM", "Mass disposal", "Move beyond awareness and toward practical action that reduces what gets thrown away.", "🗑️"],
-        ["02", "CHOICE", "Go deeper", "Rather than covering all 3Rs broadly, follow one method through systems, products, and companies.", "🔎"],
-        ["03", "FOCUS", "Recycle", "Make the transformation from waste to resources visible through real examples and an interview.", "♻️"],
+        ["01", "Refuse", "Refuse unnecessary bags and disposable containers to reduce opportunities for waste to be created.", "✋"],
+        ["02", "Reduce", "Choose only what you need, in the amount you need, to reduce the amount of waste produced.", "➖"],
+        ["03", "Reuse", "Keep using things that still work instead of throwing them away, extending their useful life.", "🔁"],
+        ["04", "Repair", "Repair broken items and keep using them, extending the time before they are discarded.", "🛠️"],
+        ["05", "Recycle", "Use finished items as resources and connect them to new uses.", "♻️"],
       ];
 
   return (
@@ -32,50 +36,46 @@ export default function RecycleFocus({ language, furigana }: Props) {
             <>
               <span className="type-katakana"><J>リサイクル</J></span><J>について詳しく知ろう。</J>
             </>
-          ) : "Go deep on Recycle instead of covering all 3Rs broadly."}
+          ) : "Learn more about recycling."}
         </h2>
-        <p className="focus-purpose-copy desktop-one-line-copy">
+        <p className="focus-purpose-copy">
           {ja ? (
-            <J>このサイトの趣旨は5Rの認知だけではなく、大量廃棄という5Rの中にある社会問題の実践的な解決方法の行動を促すことです。</J>
+            <J>リサイクルとは以下の5つの5Rと呼ばれる5つの社会問題を解決する考え方の一つです。</J>
           ) : (
-            "The goal is not to memorize the 3Rs, but to understand a practical response to mass disposal and turn that knowledge into action."
+            "Recycling is one of the five ideas known as the 5Rs for addressing social and environmental problems related to waste."
           )}
         </p>
-        <div className="five-r-list" aria-label={ja ? "5R" : "Five Rs"}>
-          {(ja
-            ? ["リフューズ", "リデュース", "リユース", "リペア", "リサイクル"]
-            : ["Refuse", "Reduce", "Reuse", "Repair", "Recycle"]
-          ).map((item) => (
-            <span key={item}>{ja ? <J>{item}</J> : item}</span>
-          ))}
-        </div>
+        <h3 className="five-r-heading">{ja ? <J>5Rとは</J> : "What are the 5Rs?"}</h3>
       </div>
 
-      <div className="focus-reason-grid">
-        {reasons.map(([number, label, title, detail, emoji]) => (
-          <article key={number} className="focus-reason-card">
+      <div className="focus-reason-grid five-r-card-grid">
+        {fiveRs.map(([number, title, detail, emoji]) => (
+          <article key={number} className="focus-reason-card five-r-card">
             <div className="focus-reason-top">
               <span className="focus-number">{number}</span>
               <span className="focus-emoji" aria-hidden="true">{emoji}</span>
             </div>
-            <p className="focus-label">{label}</p>
             <h3>{ja ? <J>{title}</J> : title}</h3>
             <p>{ja ? <J>{detail}</J> : detail}</p>
           </article>
         ))}
       </div>
 
+      <a
+        className="five-r-source-link"
+        href="https://www.erca.go.jp/jfge/greenfriends/keywords.html"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {ja ? <J>環境再生保全機構「環境キーワード一覧」内の「5R」</J> : "Environmental Restoration and Conservation Agency: 5R in Environmental Keywords"}
+        <span aria-hidden="true">↗</span>
+      </a>
+
       <div className="recycle-definition-panel">
         <div className="recycle-definition-copy">
           <p className="eyebrow">{ja ? <J>リサイクルの工程</J> : "RECYCLE IN PRACTICE"}</p>
           <h3 className="one-line-title">
-            {ja ? (
-              <>
-                <J>捨てるで終わるのではなく、次に繋げる。</J>
-              </>
-            ) : (
-              "From used item to next resource."
-            )}
+            {ja ? <J>捨てるで終わるのではなく、次に繋げる。</J> : "From used item to next resource."}
           </h3>
           <p className="recycle-definition-sentence desktop-one-line-copy">
             {ja ? (

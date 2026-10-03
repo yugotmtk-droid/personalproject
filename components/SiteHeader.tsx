@@ -13,7 +13,7 @@ type Props = {
 export default function SiteHeader({ language, furigana, onLanguageChange, onFuriganaChange }: Props) {
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="3R ACTION Recycle Focus home"><span className="brand-mark">3R</span><span>ACTION</span></a>
+      <a className="brand" href="#top" aria-label="5R ACTION Recycle Focus home"><span className="brand-mark">5R</span><span>ACTION</span></a>
       <nav className="header-controls" aria-label="Display controls">
         <div className="segmented" role="group" aria-label="Language">
           <button className={language === "ja" ? "active" : ""} onClick={() => onLanguageChange("ja")}><JapaneseText text="日本語" enabled={furigana} /></button>

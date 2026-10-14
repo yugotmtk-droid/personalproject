@@ -23,7 +23,10 @@ export default function HeroSection({ language, furigana }: Props) {
           {language === "ja" ? (
             <><span className="hero-title-line"><J>リサイクルに対する</J></span><span className="hero-title-line"><J>解決方法を知ろう。</J></span></>
           ) : (
-            <span className="hero-title-line">Learn practical solutions through recycling.</span>
+            <>
+              <span className="hero-title-line">Learn practical solutions</span>
+              <span className="hero-title-line">through recycling.</span>
+            </>
           )}
         </h1>
         <p className="hero-lead hero-lead-two-lines">

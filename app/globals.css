@@ -2207,3 +2207,23 @@ html[lang="en"] .tokyo-summary-one-line {
   .flow-one-line-title,
   .flow-one-line-title .jp-text { white-space: normal !important; }
 }
+
+
+/* 2026-10-14 English title spacing fix */
+html[lang="en"] .recycle-hero .hero-two-line-title {
+  max-width: 980px !important;
+  font-size: clamp(40px, 4.05vw, 60px) !important;
+  line-height: 1.02 !important;
+}
+html[lang="en"] .recycle-hero .hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+@media (min-width: 901px) {
+  html[lang="en"] .field-report-main-title {
+    white-space: nowrap !important;
+    font-size: clamp(28px, 2.3vw, 38px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.04em !important;
+  }
+}

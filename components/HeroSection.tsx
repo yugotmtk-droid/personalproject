@@ -44,9 +44,9 @@ export default function HeroSection({ language, furigana }: Props) {
       </div>
 
       <div className="hero-visual recycle-hero-visual" aria-hidden="true">
-        <div className="hero-orbit hero-orbit-outer"><span>WASTE</span></div>
-        <div className="hero-orbit hero-orbit-middle"><span>RECYCLE</span></div>
-        <div className="hero-orbit hero-orbit-inner"><span>RESOURCE</span></div>
+        <div className="hero-orbit hero-orbit-outer" />
+        <div className="hero-orbit hero-orbit-middle" />
+        <div className="hero-orbit hero-orbit-inner" />
         <div className="hero-recycle-core"><div className="hero-recycle-icon">♻</div></div>
       </div>
     </section>

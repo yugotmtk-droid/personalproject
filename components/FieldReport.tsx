@@ -74,10 +74,7 @@ export default function FieldReport({ language, furigana }: Props) {
           <div className="report-company-intro-copy">
             <p className="eyebrow">INTERVIEW / COMPANY</p>
             <h3 id="company-intro-title" className="one-line-title">{ja ? <J>奥山商店株式会社について</J> : "First, meet Okuyama Shoten Co., Ltd."}</h3>
-            <p>{ja ? (<>
-              <J>奥山商店株式会社は日頃から私たちが普段何気なく捨てているゴミを資源として活用できるようにする会社です。</J><br />
-              <J>下の数字はそれぞれ会社を象徴する三つの数字です。</J>
-            </>) : "The three figures below are a quick company introduction so you know whose work this report follows before exploring the recycling process."}</p>
+            <p>{ja ? <J>奥山商店株式会社は日頃から私たちが普段何気なく捨てているゴミを資源として活用できるようにする会社です。特に腰を中心に回収しています。下の数字はそれぞれの会社を象徴する三つの数字です。</J> : "The three figures below are a quick company introduction so you know whose work this report follows before exploring the recycling process."}</p>
           </div>
           <a className="report-company-badge" href="https://okuyama-syouten.co.jp/" target="_blank" rel="noreferrer">
             <span aria-hidden="true">🏢</span>
@@ -198,7 +195,7 @@ export default function FieldReport({ language, furigana }: Props) {
           <div className="challenge-number-grid">
             <article className="challenge-number-card decline"><span>{ja ? <J>新聞の回収量</J> : "Newspaper collection"}</span><strong>約 -20%</strong><p>{ja ? <J>毎年新聞の回収量は減少傾向にある</J> : "Newspaper collection is declining each year"}</p></article>
             <article className="challenge-number-card decline"><span>{ja ? <J>雑誌・雑紙</J> : "Magazines / mixed paper"}</span><strong>約 -10%</strong><p>{ja ? <J>毎年雑誌・雑紙の回収量も同じく減少傾向にある</J> : "Magazine and mixed-paper collection is also declining each year"}</p></article>
-            <article className="challenge-number-card fire"><span>{ja ? <J>1台あたりの回収車代</J> : "Cost per collection truck"}</span><strong className="packer-price">{ja ? "約1,000万円" : "about ¥10M"}</strong><p>{ja ? <J>新車価格の目安</J> : "approximate replacement cost"}</p></article>
+            <article className="challenge-number-card fire"><span>{ja ? <J>主に回収してるもの</J> : "MAIN COLLECTION ITEMS"}</span><strong className="packer-price">4</strong><p>{ja ? <J>新聞・雑誌・段ボール・牛乳パック</J> : "newspaper, magazines, cardboard, and milk cartons"}</p></article>
           </div>
         </section>
 
